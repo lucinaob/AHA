@@ -1,3 +1,136 @@
+Certainly! Creating documentation for future students is crucial for ensuring a smooth transition and understanding of the work done on a Django project with an Angular frontend. Below is a template for such documentation:
+
+# Project Documentation
+
+## Overview
+
+This documentation provides a comprehensive guide for future students to interface with the Django project, which incorporates an Angular frontend. The project focuses on [brief project description].
+
+### Technologies Used
+
+- Django: 4.2.6
+- Angular: 17
+- Database: MySQL
+
+## Setup Instructions
+
+### Prerequisites
+
+Ensure that the following tools are installed on your machine:
+
+- Python 3.11
+- Node.js v20.5.0
+
+### Backend Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone [repository-url]
+   ```
+
+2. Navigate to the Django backend directory:
+
+   ```bash
+   cd backend
+   ```
+
+3. Apply migrations (when you change the structure of database):
+
+   ```bash
+   python manage.py migrate
+   ```
+
+4. Start the Django development server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+### Frontend Setup
+
+1. Navigate to the Angular frontend directory:
+
+   ```bash
+   cd frontend
+   ```
+
+2. Install Node.js dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the Angular development server:
+
+   ```bash
+   ng serve
+   ```
+
+4. Open your browser and navigate to `http://localhost:4200/` to access the Angular frontend.
+
+## Dataset
+
+### Description
+
+The dataset comes from teh manually entered google sheet. Each xlsx file is consisted of several sheets including `yearly sessions`, `conferense session database`, `conferences & locations`, `all institutions`, `topical index`, and `panel unique words` for one year. `yearly sessions` counts the number of sessions in the specific year. 'conferense session database' record the title of the sessions, the type, the chair and chair institution, participants and participants' paper (if applicable), the start time and day, the topics, and AHA affilicated societies.
+
+### Dataset Integration
+
+- Django Model is defined in `models.py`
+  
+  - **Geolocation Model:**
+  
+    *id*: Auto-incremented primary key.
+    
+    *year*: Integer field representing the year (nullable).
+    
+    *city*: Text field for the city.
+    
+    *state*: Text field for the state.
+    
+    *region*: Text field for the region.
+    
+    *latitude*: Float field for latitude.
+    
+    *longitude*: Float field for longitude.
+    
+   - **Institution Model:**
+    
+      _institution_: Auto-incremented primary key.
+      
+      _geolocation_: Foreign key relationship with the Geolocation model, allowing a link to a specific geolocation. This field is nullable, and the on_delete=models.CASCADE ensures that if a Geolocation record is deleted, the associated Institution records are also deleted. The related_name attribute is set to 'geolocation_id' for reverse lookups.
+      
+      _name_: Text field for the institution's name.
+    
+    - **Session Model:**
+    
+      _id_ : Auto-incremented primary key.
+      
+      _year_: Integer field representing the year.
+      
+      _type_: Text field for the session type.
+      
+      _title_: Text field for the session title.
+      
+      _paper_: Text field for the paper associated with the session.
+      
+      _topic_: Text field for the session topic.
+    
+      _affiliated_societies_: Text field for affiliated societies.
+      
+      _participants_: Text field for participants (nullable).
+    
+    - **Topic Model:**
+    
+      _id_: Auto-incremented primary key.
+      
+      _topic_: Text field for the topic.
+    
+- Data imported using `load.py`
+  
+  change `file_name` and `xlsx_path` to import different tables.
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
@@ -6,22 +139,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Helpful links
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Django: https://docs.djangoproject.com/en/5.0/
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular: https://angular.io/docs, https://material.angular.io/components/categories
