@@ -71,7 +71,7 @@ Ensure that the following tools are installed on your machine:
 
 ### Description
 
-The dataset comes from teh manually entered google sheet. Each xlsx file is consisted of several sheets including `yearly sessions`, `conferense session database`, `conferences & locations`, `all institutions`, `topical index`, and `panel unique words` for one year. `yearly sessions` counts the number of sessions in the specific year. 'conferense session database' record the title of the sessions, the type, the chair and chair institution, participants and participants' paper (if applicable), the start time and day, the topics, and AHA affilicated societies.
+The dataset comes from teh manually entered google sheet. Each xlsx file is consisted of several sheets including `yearly sessions`, `conferense session database`, `conferences & locations`, `all institutions`, `topical index`, and `panel unique words` for one year. `yearly sessions` counts the number of sessions in the specific year. `conferense session database` records the title of the sessions, the type, the chair and chair institution, participants and participants' paper (if applicable), the start time and day, the topics, and AHA affilicated societies.
 
 ### Dataset Integration
 
