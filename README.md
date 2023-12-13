@@ -1,5 +1,3 @@
-Certainly! Creating documentation for future students is crucial for ensuring a smooth transition and understanding of the work done on a Django project with an Angular frontend. Below is a template for such documentation:
-
 # Project Documentation
 
 ## Overview
