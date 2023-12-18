@@ -2,8 +2,7 @@
 
 ## Overview
 
-This documentation provides a comprehensive guide for future students to interface with the Django project, which incorporates an Angular frontend. The project focuses on [brief project description].
-
+This documentation provides a comprehensive guide for future students to interface with the Django project, which incorporates an Angular frontend. The project focuses on visulizing the statistics of past AHA Conferences.
 ### Technologies Used
 
 - Django: 4.2.6
