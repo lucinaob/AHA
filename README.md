@@ -131,7 +131,18 @@ The dataset comes from teh manually entered google sheet. Each xlsx file is cons
 
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+- src/index.html:
+  
+  Define the overall structure of the HTML document
+  
+- src/style.scss
+  
+  Define the styles for HTML elements, including layout, positioning, and sizing of elements, colors for text, backgrounds, and borders.
+
+- src/app
+
+  components under this directory.
+  
 
 ## Development server
 
