@@ -26,10 +26,10 @@ Ensure that the following tools are installed on your machine:
    git clone [repository-url]
    ```
 
-2. Navigate to the Django backend directory:
+2. Navigate to the Django backend(aha) directory:
 
    ```bash
-   cd backend
+   cd aha
    ```
 
 3. Apply migrations (when you change the structure of database):
