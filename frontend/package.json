@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build — prod",
+    "engines": { "node": "20.1.0", "npm": "9.6.4" }
   },
   "private": true,
   "dependencies": {
@@ -26,7 +28,8 @@
     "chart.js": "^4.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.14.2",
+    "@angular/cli": "x.x.x"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.3",
