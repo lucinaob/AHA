@@ -7,8 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "ng build — prod",
-    "engines": { "node": "20.1.0", "npm": "9.6.4" }
+    "heroku-postbuild": "ng build —-prod"
   },
   "private": true,
   "dependencies": {
